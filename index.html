@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gheffira Personal Website</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-card">
+                <img src="img/gep.jpeg" alt="foto-abrar" class="profile-pic">
+                <h1>Gheffira Putri NurF</h1>
+                <h2>Mahasiswa Polman Bandung</h2>
+                <p>Memiliki Motivasi Untuk Terus Belajar.</p>
+                
+                <!-- Social Media Links -->
+                <div class="social-media">
+                    <a href="https://www.facebook.com/people/Ghefira-Nur/pfbid0EktRjSqrFBaYFDqqruy1pZmG2iPeZu3V24baoVwDNQkFZykui5K92a2wDkU1XgF7l/?mibextid=ZbWKwL" target="_blank" class="bi bi-facebook">
+                    </a>
+                    <a href="https://www.instagram.com/gffirabrtheon?igsh=MTZtMTN4YWc0b3N0Nw==" target="_blank" class="bi bi-instagram">
+                    </a>
+                    <a href="https://www.linkedin.com/in/gheffira-wirasonjaya-113338314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="bi bi-linkedin"></a>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Date and Time -->
+        <section class="date-time">
+            <div class="clock-box">
+                <p id="current-date"></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const dateElement = document.getElementById('current-date');
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    
+        function updateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString('id-ID', options);
+            const time = now.toLocaleTimeString('id-ID');
+            dateElement.innerHTML = `${date} | ${time}`;
+        }
+        
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    
+</body>
+</html>
